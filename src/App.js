@@ -1,26 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { decreaseCounter, increaseCounter } from './action/actions';
+import Home from './components/Home';
 
 function App(props) {
-  const dispatch = useDispatch();
-
-  // event handler
-  const handleIncrease = () => {
-    // dispatch action
-    dispatch(increaseCounter());
-  };
-
-  const newCount = useSelector((state) => {
-    return state.counter.count;
-  });
 
   return (
     <>
-      <div>Count: {newCount}</div>
-
-      <button onClick={() => handleIncrease()}>Increase Count</button>
-
-      <button onClick={() => dispatch(decreaseCounter())}>Decrease Count</button>
+      <Home />
     </>
   );
 }
